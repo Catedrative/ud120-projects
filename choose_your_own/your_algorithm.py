@@ -30,10 +30,10 @@ plt.show()
 
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
-
-
-
-
+X = features_train
+from sklearn.neighbors import NearestNeighbors
+nbrs = NearestNeighbors(n_neighbors=2, algorithm='ball_tree').fit(X)
+distances, indices = nbrs.kneighbors(X)
 
 
 
